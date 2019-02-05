@@ -1,0 +1,124 @@
+<div align="center" class="col-lg-12 bold">Enums Example</div>
+<div class="row">
+	<div class="col-lg-6" style="top:20px;">
+		<div class="card">
+			<div class="card-header">
+				Output
+			</div>
+			<div class="card-body" style="height:600px;overflow:auto;">
+				<p> For Loop on the Declared Enum's</p>
+			 	<div *ngFor="let item of roleEnum | enumToArray">
+					{{ item}}
+				</div> 
+				<br>
+				<p>The Values assigned to the enums</p>
+				<div>Employee : {{roleEnum.Employee}}</div>
+				<div>Employer : {{roleEnum.Employer}}</div>
+				<div>Admin : {{roleEnum.Admin}}</div>
+				<div>HR : {{roleEnum.HR}}</div>
+				<div>Staffs : {{roleEnum.Staffs}}</div>
+	<!-- 			<p>Run Time Enum</p>
+				<p>Reverse Mappings</p>
+				<div>{{roleEnum.Admin}}</div>
+				<div>{{nameOfA}}</div>
+				<div id="constnum"></div> -->
+	
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6" style="top:20px">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="code-tab" data-toggle="tab" href="#code" role="tab" aria-controls="code" aria-selected="true">Code</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="desc-tab" data-toggle="tab" href="#desc" role="tab" aria-controls="desc" aria-selected="false">Description</a>
+			</li>
+		</ul>
+		<div class="tab-content tabs" id="myTabContent">
+			<div class="tab-pane fade show active" id="code" role="tabpanel" aria-labelledby="code-tab">
+					<div>
+						<p>Enum Declaration</p>
+							<pre><code align="justify">
+								export enum Role {{'{'}}
+    							Employee,Employer,Admin,HR,Staffs}
+							</code></pre>
+							</div>
+							<div>
+								<p>Reverse Mapping</p>
+								<pre>
+									<code>
+											let a = Role.Admin; //2
+											let nameOfA = Role[a]; // "Admin"
+									</code>
+								</pre>
+							</div>
+			</div>
+			<div class="tab-pane fade" id="desc" role="tabpanel" aria-labelledby="desc-tab">
+				<h4>Enum</h4>
+				<div>Enums allows us to define a set of named constants.</div>
+				<div>Typescript provides two types of enums</div>
+				<div class="bold">1. Numeric Enums</div>
+				<div>
+					<pre><code align="justify">
+						enum Direction {{'{'}}
+						Up = 1,
+						Down,
+						Left,
+						Right,}
+					</code></pre>
+					<pre>
+						<code>
+							enum  E {{'{'}}
+							A = getSomeValue(),
+							B,   // error! 'A' is not constant-initialized,
+							so 'B' needs an initializer}
+
+						</code></pre>
+					</div>
+					<div class="bold">2. String Enums</div>
+					<div>
+						<pre><code>
+							enum Direction {{'{'}}
+							 Up = "UP",
+							Down = "DOWN",
+							Left = "LEFT",
+							Right = "RIGHT" },
+
+						</code></pre></div>
+						<br/>
+						<div>There are also Heterogenous Enums:
+						both numeric and string enums mixed</div>
+						<div>
+							<pre>
+								<code>
+									enum Heteroenum {{'{'}}
+									No = 0,
+									Yes = "YES"}
+								</code>
+							</pre>
+						</div>
+						<br>
+						<div>
+							<span>Key factors of Enum:</span><br>
+							<span>1. Constant and Computed Members</span><br>
+							<div>
+									<pre><code>
+										enum FileAccess {{'{'}}
+										// constant members
+										None,
+										Read    = 1 &lt;&lt; 1,
+										Write   =1 &lt;&lt; 2,
+										ReadWrite  = Read | Write,
+										// computed member
+										G = "1213".length}
+									</code></pre>
+							</div>
+							<span>2. Enums are real objects that exist at runtime</span><br>
+							<span>3. Reverse Mappings</span><br>
+							<span>4. const Enums</span><br>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

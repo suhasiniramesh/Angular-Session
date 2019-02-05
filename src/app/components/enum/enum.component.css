@@ -1,0 +1,42 @@
+.card{
+	width:100% !important;
+	max-width: 100%;
+}
+.row{
+	margin:0px;
+}
+
+.bold{
+	font-weight: bold;
+}
+pre{
+	    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 15px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    line-height: 1.4285;
+    background-color: #eaeef3;
+    border-radius: 0px;
+    -webkit-text-size-adjust: none;
+    overflow: hidden;
+    text-align: left;
+    white-space: pre-line;
+}
+pre code{
+	    color: darkslategray;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 1em !important;
+    padding: 0rem;
+    
+}
+
+
+.tabs{
+	padding:20px;
+	border:1px solid #dcdcdc;
+	height:600px;
+	overflow: auto;
+}
